@@ -1,0 +1,295 @@
+@import url("./utility.css");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons+Outlined");
+
+:root {
+    --background-color: #fafafa;
+    --primary-color: #3b82f6;
+    --accent-color: #a9a9a9;
+}
+
+body {
+    background-color: var(--background-color);
+    line-height: 1.5;
+    letter-spacing: 0.8px;
+}
+
+.heading {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    padding: 8px 1.5rem;
+}
+
+.nav {
+    margin-left: auto;
+    padding-right: 2rem;
+}
+
+.logo {
+    display: block;
+    color: var(--background-color);
+}
+
+.list-non-bullet {
+    list-style: none;
+    
+}
+
+.list {
+    display: inline-block;
+    padding: 0 10px;
+}
+
+.link {
+    color: var(--background-color);
+}
+
+.container {
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    padding: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 2rem auto;
+  }
+
+.text-area {
+    width: 100%;
+    padding: 4px 8px 0 8px;
+    resize: none;
+    background-color: transparent;
+    border: 1px solid var(--accent-color);
+}
+
+.text-area:focus {
+    outline: none;
+}
+
+.button {
+    background: transparent;
+    border: none;
+    color: var(--background-color);
+}
+
+
+.add-btn {
+    right: 1.25rem;
+    bottom: -1rem;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background: var(--primary-color);
+}
+
+.button:hover {
+    cursor: pointer;
+    opacity: 0.85;
+}
+
+.title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #b24b4b;
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    border: none;
+    border-bottom: 4px solid #df4e4e;
+    background-color: #fff;
+    outline: none;
+  }
+
+.note {
+    font-size: 1rem;
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 0 0 4px 4px;
+    resize: none;
+    outline: none;
+    background-color: #fff;
+  }
+
+  .pin-title,
+.other-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem; /* Add margin below the titles */
+}
+
+.pinned-notes-container{
+    padding-bottom: 3rem;
+}
+
+.notes-display,
+.archive-notes {
+    padding: 2rem 4rem;
+}
+
+
+.single-note {
+    border: 1px solid var(--accent-color);
+    border-radius: 10px;
+    width: 18vw;
+    align-self: flex-start;
+    padding: 10px;
+    transition: transform 0.2s ease;
+    position: relative;
+
+}
+
+/*
+.single-note {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 0.5rem;
+    max-width: 400px;
+    position: relative;
+  }
+*/
+  .title-container {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Dark mode styles */
+  .dark-mode .single-note {
+    background-color: #fff;
+    color: #333;
+  }
+
+.single-note span {
+    white-space: pre-wrap;
+    word-break: break-word;
+    align-self: flex-start;
+}
+
+.single-note-title {
+    font-weight: 600;
+}
+
+
+.single-note p {
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+.del-btn {
+    color: var(--primary-color);
+    margin-left: auto;
+    align-self: flex-start;
+}
+.single-note:hover > .title-container{
+    color: #3b82f6;
+}
+
+.single-note:hover > .title-container > .del-btn {
+    visibility: visible;
+
+}
+
+.single-note:hover > .options > .btn {
+    visibility: visible;
+}
+
+.single-note:hover {
+    transform: scale(1.1); /* Increase the size of the card by 10% */
+    box-shadow: 4px 4px 8px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a box shadow on hover */
+  }
+
+.options {
+    margin-top: 1rem;
+}
+
+.pinned-btn {
+    color: var(--primary-color);
+}
+
+.pin {
+    color: red;
+}
+
+/* Dark mode button styling */
+.dark-mode-btn {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #1a1a1a;
+    color: #ffffff;
+  }
+
+  .dark-mode {
+    background-color: #1a1a1a;
+    color: #fff;
+  }
+
+/* Container to center the note and title */
+
+.note-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 400px;
+    margin: 2rem auto;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Positioning and style for the date and time element */
+.note-date-time {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 0.6rem;
+    color: #575655;
+    margin: 0.2rem;
+  }
+
+  /* Styling for the search bar container */
+  .search-container {
+    display: flex;
+    align-items: center;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    margin-right: 1rem;
+  }
+  
+  /* Styling for the search input */
+  #searchInput {
+    border: none;
+    background: transparent;
+    outline: none;
+    flex: 1;
+    margin-right: 0.5rem;
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  /* Styling for the search button */
+  #searchButton {
+    border: none;
+    background-color: #4CAF50;
+    color: #fff;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  
+  

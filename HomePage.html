@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/assets/notes-ico.ico" type="image/x-icon">
+    <title>Notes Application</title>
+    <link rel="stylesheet" href="/assets/style.css">
+</head>
+
+<body class="body" data-page="home">
+    <header class="heading d-flex">
+        <div class="d-flex align-center gap-sm">
+            <img src="/assets/note.png">
+            <h1 class="heading-1">
+                <a class="link" href="/">NoteBound: Personalized Notes</a>
+            </h1>
+        </div>
+        <nav class="nav d-flex align-center">
+            <ul class="list-non-bullet">
+              <li class="list">
+                <div class="search-container">
+                  <input type="text" id="searchInput" placeholder="Search notes...">
+                  <button id="searchButton">Search</button>
+                </div>
+              </li>
+            </ul>
+          </nav>
+    </header>
+    <div class="container d-flex direction-column align-center relative">
+        <input type="text" class="text-area title" placeholder="Title">
+        <textarea class="text-area note" placeholder="Start writing your notes..."></textarea>
+        <button class="button add-btn d-flex align-center justify-center absolute">
+            <span class="material-icons-outlined">
+                add
+            </span>
+        </button>      
+    </div>
+    <div class="notes-display">
+        <div class="pin-title d-none">Pinned Notes :</div>
+        <div class="pinned-notes-container d-flex wrap gap-md"></div> <!-- Pinned Notes -->
+        <div class="other-title d-none"> Notes : </div> 
+        <div class="notes-container d-flex wrap gap-md"></div> <!-- Unpinned Notes-->
+    </div>
+    <button id="darkModeButton" class="dark-mode-btn link cursor">Dark Mode</button>
+    <script type="module">
+        // ... Your existing JavaScript code ...
+    </script>
+    <script type="module" src="/javascript/HomePageJS.js"></script>  
+</body>
+
+</html>
